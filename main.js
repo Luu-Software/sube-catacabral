@@ -11,3 +11,21 @@ Distancia	  | Con SUBE registrada   | Con SUBE sin registrar
 boton.addEventListener("click", () => {
   // COMPLETAR
 });
+let registro= registrada.value
+let distance= distancia.value
+let precio=0
+if (distance<=3){if (registro===si){
+  precio=715.24
+}
+else if(distance<=6) if(registro===si)
+precio=794.74
+else if(distance<=12) if(registro===si)
+  precio=855.97
+else if(distance<=27) if(registro===si)
+  precio=917.24
+}
+else {(registro===no)
+  console.log("no estas registrado!");
+}
+
+tarifa.innerText="El valor de tu viaje es" +precio
