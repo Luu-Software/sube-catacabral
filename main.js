@@ -12,24 +12,31 @@ boton.addEventListener("click", () => {
   // COMPLETAR
 
   let registro= registrada.value
-let distance= distancia.value
+let distance= Number(distancia.value)
 let precio=0;
 if (distance<=3){
-  if (registro==="si"){
-  precio= 715.24;
+  if (registro==="si") {
+  precio=715.24;}
+ else{precio=1137.23;}
 }
-else if(distance<=6) if(registro==="si")
-  {precio= 794.74;}
-else if(distance<=12) if(registro==="si")
-  {precio= 855.97;}
-else if(distance<=27) if(registro==="si")
-  {precio= 917.24;}
+else if(distance<=6){
+  if(registro==="si"){
+    precio=794.74;
+  } else {precio=1263.64}
 }
-else {(registro==="no")
-  console.log("no estas registrado!");
+else if(distance<=12){
+  if(registro==="si"){
+    precio=855.97;
+  } else{precio=1360.90;}
+}
+else if(distance<=27){
+  if(registro==="si"){
+    precio=917.24;
+  }
+  else{precio=1458.41;}
 }
 
-tarifa.innerText="El valor de tu viaje es " + precio
+tarifa.innerText="El valor de tu viaje es " + precio;
 
 
 });
